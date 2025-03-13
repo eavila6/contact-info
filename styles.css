@@ -1,0 +1,275 @@
+/*CSS file*/
+
+/*Don't style the headers
+style classes instead*/
+/* h1 {
+    background: powderblue;
+    /*border-radius: 5px;
+    display: static;
+    I did some font rearrangement
+    cuz I like Tahoma
+    font-family: Tahoma,
+    'Segoe UI', Geneva, Verdana, sans-serif;
+    font-size: 60px;
+    font-weight: normal;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    text-align: center;
+
+    left: 500px;
+
+    position: absolute;
+} */
+
+p {
+    /*same thing as above font family
+    I prefer Helvetica*/
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;   /*this is the standard line height*/
+}
+
+a:link {
+    /*a visited link will dissappear
+    with this styling*/
+    /*background-color: transparent;*/
+    color: yellow;
+    text-decoration: none;
+}
+a:visited {
+    color: blue;
+    text-decoration: none;
+}
+a:hover{
+    color:red;
+    text-decoration: underline;
+}
+a:active{
+    color: gold;
+    text-decoration: underline;
+}
+
+img{
+    float: center;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /*height: auto;
+    width: auto;*/
+}
+
+
+
+/*Styling for classes*/
+
+/*container to mimic what others have done before*/
+.container{
+    align-items: center;
+    background-color: lightsteelblue;
+    border-style: inset;
+    border-width: 2%;
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+
+.image{
+    float: right;
+    align-items: center;
+    justify-content: center;
+    /*these margins are very carefully balanced
+    plz do not touch*/
+    margin-left: 0.5%;
+    margin-right: 2%;
+    /*object-fit: contain;*/
+}
+
+/*jumbotron should be used for headers*/
+.jumbotron{
+    background-color: gainsboro;
+    border-color: lightcoral;
+    border-style: outset;
+    border-width: 5px;
+    color: tomato;
+    display: static;
+    /*I did some font rearrangement
+    cuz I like Tahoma*/
+    font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 5%;
+    /* margin-right: auto;*/
+    padding: 30px;
+    text-align: center;
+}
+
+.text{
+    float: left;
+    margin-left: 2%;
+    margin-right: 2%;
+    /*padding: 20px;*/
+}
+
+.list{
+    float: left;
+    list-style-type: none;
+}
+
+.stylepara{
+    border-style: inset;
+    background-color: plum;
+}
+
+.quirkyul {
+    list-style-type: none;
+    border-style: inset;
+    
+    padding: 5px;
+    background-color: plum;
+}
+
+
+.quirkyli{
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: pink;
+}
+
+
+#myHeader {
+    background-color: gainsboro;
+    border-width: 15px;
+    border-style: double;
+    border-color:palevioletred;
+    color: black;
+    padding: 40px;
+    text-align: center;
+}
+
+/* if something breaks it might be bcoz of this*/
+/* ----------------------------------------------------------*/
+/* yoooooo I figured out this cool html trick!
+
+This should make the screen go all rainbow-y like the kahoot lobby
+-EAVI
+
+baColor are the colors the background should cycle through
+spin is how I learned how to make the colors change
+*/
+body{
+	text-align: center;
+	animation: baColor 10s infinite;
+	animation-direction: alternate;
+}
+
+@keyframes baColor {
+	0% {
+		background-color: firebrick;
+	}
+
+	20% {
+		background-color: mediumorchid;
+	}
+
+	40% {
+		background-color: lightskyblue;
+	}
+
+	60% {
+		background-color: mediumseagreen;
+	}
+
+	80% {
+		background-color: goldenrod;
+	}
+
+	100% {
+		background-color: darkorange;
+	}
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+/*--------------------------------------*/
+/*Styling a header*/
+/* Style the header with a background and some padding */
+.header {
+    overflow: hidden;
+    background-color: lightsteelblue;
+    padding: 20px 10px;
+}
+  
+  /* Style the header links */
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+  
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+  
+/* Change the background color on mouse-over */
+.header a:hover {
+    background-color: blanchedalmond;
+    color: black;
+}
+  
+/* Style the active/current link*/
+.header a.active {
+    background-color: dodgerblue;
+    color: black;
+}
+  
+/* Float the link section to the right */
+.header-right {
+    float: right;
+}
+  
+  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .header-right {
+        float: none;
+    }
+
+    .text{
+        width: 60%;
+    }
+
+    img{
+        width:700%;
+    }
+}
+
+.animated_rainbow {
+    animation: animatedBackground_a 5s linear infinite alternate;
+    background-clip: text;
+    background-image: -webkit-linear-gradient(left, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500, #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2a, #0f5, #00ff80, #0fa, #00ffd5, #0ff, #00d5ff, #0af, #0080ff, #05f, #002aff, #00f, #2b00ff, #50f, #8000ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
+    font-size: 12px;
+    font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #0000;
+    
+}
+
+@keyframes animatedBackground_a {
+    0% { background-position: 0 0 }
+    100% { background-position: -500px 0 }
+}
